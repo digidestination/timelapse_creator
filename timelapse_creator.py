@@ -13,11 +13,6 @@ for f in tqdm(sorted(os.listdir(image_folder))):
     else:
         print(f"{f} is not a jpeg file.")
 
-for i,img in enumerate(images):
-    file_name = os.path.splitext(os.listdir(image_folder)[i])[0]
-    font = cv2.FONT_HERSHEY_SIMPLEX
-    cv2.putText(img,file_name, (img.shape[1]-250,img.shape[0]-20), font, 0.5, (255,255,255), 2, cv2.LINE_AA)
-
 first_file_name = os.path.splitext(os.listdir(image_folder)[0])[0]
 last_file_name = os.path.splitext(os.listdir(image_folder)[-1])[0]
 filename = first_file_name + '_until_' + last_file_name + '.mp4'
