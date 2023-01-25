@@ -45,3 +45,8 @@ When the script encounters the first image in a new directory, it uses the os.pa
 The script then uses the shutil.move() function to move the current image into the new directory, and increments the count variable by 1. When the count variable reaches 2500 or the loop reaches the last image, the script resets the count variable to 0 and increments the folder_count variable by 1, starting a new directory.
 
 Once the loop has finished, the script prints a message to the console to confirm that the images have been sorted and split into folders.
+
+# Merge all video files in to one file
+## merge_all_video_files.py
+This script prompts the user to enter the path to a directory containing video files in the format of '.mp4'. The script then reads all the video files in the specified directory and stores them in a list. The script then prints out the list of video files that will be merged, using the tqdm library to show the progress of the merging process. The script then uses the first video in the list to set the dimensions of the output video, and the rest of the videos are then appended to the output video using the VideoWriter class in openCV library. The output video is then saved with the name 'merged_videos.mp4' and the script displays a message that the video merging is complete.
+
