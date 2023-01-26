@@ -22,7 +22,7 @@ height = int(cap.get(4))
 cap.release()
 
 out = cv2.VideoWriter(output_filename, fourcc, 24.0, (width,height))
-
+videos = sorted(videos)
 for video in tqdm(videos):
     cap = cv2.VideoCapture(os.path.join(video_folder, video))
     while True:
